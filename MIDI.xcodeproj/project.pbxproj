@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADA9817EE6B76D5AABD111A5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA985888EC1405E04CFF9F8 /* AVFoundation.framework */; };
+		ADA9819D517591E3BBEFA605 /* MIDIParser.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA982786AB93473391F1CA9 /* MIDIParser.m */; };
+		ADA98D463B67EF9DBA69FA00 /* TrackSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA9819B6EE53ECC47563C14 /* TrackSetting.m */; };
+		ADA98DD16F6D8B112BFFA054 /* Trombone.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = ADA980C445CEB7FDD5D2FA13 /* Trombone.aupreset */; };
+		ADA98F201D05CB1C528D1C62 /* ChannelSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA980C59A688EEB0DED3B36 /* ChannelSetting.m */; };
 		C5254AEF18E424E100E1DF59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5254AEE18E424E100E1DF59 /* Foundation.framework */; };
 		C5254AF118E424E100E1DF59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5254AF018E424E100E1DF59 /* CoreGraphics.framework */; };
 		C5254AF318E424E100E1DF59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5254AF218E424E100E1DF59 /* UIKit.framework */; };
@@ -21,6 +26,10 @@
 		C5254B1018E424E100E1DF59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5254AF218E424E100E1DF59 /* UIKit.framework */; };
 		C5254B1818E424E100E1DF59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5254B1618E424E100E1DF59 /* InfoPlist.strings */; };
 		C5254B1A18E424E100E1DF59 /* MIDITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5254B1918E424E100E1DF59 /* MIDITests.m */; };
+		C5254B2A18E4257500E1DF59 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5254B2718E4257500E1DF59 /* AudioToolbox.framework */; };
+		C5254B2C18E4257500E1DF59 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5254B2918E4257500E1DF59 /* CoreAudio.framework */; };
+		C5254B2E18E42B4F00E1DF59 /* Vibraphone.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = C5254B2D18E42B4F00E1DF59 /* Vibraphone.aupreset */; };
+		C5254B3418E5911B00E1DF59 /* 1.mid in Resources */ = {isa = PBXBuildFile; fileRef = C5254B3318E5911B00E1DF59 /* 1.mid */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ADA980B3FFB1736D33C839B5 /* MIDIParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIParser.h; sourceTree = "<group>"; };
+		ADA980C445CEB7FDD5D2FA13 /* Trombone.aupreset */ = {isa = PBXFileReference; lastKnownFileType = file.aupreset; path = Trombone.aupreset; sourceTree = "<group>"; };
+		ADA980C59A688EEB0DED3B36 /* ChannelSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelSetting.m; sourceTree = "<group>"; };
+		ADA980E629E6EDD7589962DF /* TrackSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackSetting.h; sourceTree = "<group>"; };
+		ADA9819B6EE53ECC47563C14 /* TrackSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackSetting.m; sourceTree = "<group>"; };
+		ADA982786AB93473391F1CA9 /* MIDIParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDIParser.m; sourceTree = "<group>"; };
+		ADA985888EC1405E04CFF9F8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		ADA989FE7FE1F08BE5708324 /* ChannelSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelSetting.h; sourceTree = "<group>"; };
 		C5254AEB18E424E100E1DF59 /* MIDI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIDI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5254AEE18E424E100E1DF59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C5254AF018E424E100E1DF59 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +70,11 @@
 		C5254B1518E424E100E1DF59 /* MIDITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MIDITests-Info.plist"; sourceTree = "<group>"; };
 		C5254B1718E424E100E1DF59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C5254B1918E424E100E1DF59 /* MIDITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIDITests.m; sourceTree = "<group>"; };
+		C5254B2718E4257500E1DF59 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C5254B2818E4257500E1DF59 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		C5254B2918E4257500E1DF59 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		C5254B2D18E42B4F00E1DF59 /* Vibraphone.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Vibraphone.aupreset; sourceTree = "<group>"; };
+		C5254B3318E5911B00E1DF59 /* 1.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = 1.mid; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +82,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5254B2A18E4257500E1DF59 /* AudioToolbox.framework in Frameworks */,
+				C5254B2C18E4257500E1DF59 /* CoreAudio.framework in Frameworks */,
 				C5254AF118E424E100E1DF59 /* CoreGraphics.framework in Frameworks */,
 				C5254AF318E424E100E1DF59 /* UIKit.framework in Frameworks */,
 				C5254AEF18E424E100E1DF59 /* Foundation.framework in Frameworks */,
+				ADA9817EE6B76D5AABD111A5 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,10 +107,12 @@
 		C5254AE218E424E000E1DF59 = {
 			isa = PBXGroup;
 			children = (
+				C5254B2D18E42B4F00E1DF59 /* Vibraphone.aupreset */,
 				C5254AF418E424E100E1DF59 /* MIDI */,
 				C5254B1318E424E100E1DF59 /* MIDITests */,
 				C5254AED18E424E100E1DF59 /* Frameworks */,
 				C5254AEC18E424E100E1DF59 /* Products */,
+				ADA980C445CEB7FDD5D2FA13 /* Trombone.aupreset */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +128,14 @@
 		C5254AED18E424E100E1DF59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C5254B2718E4257500E1DF59 /* AudioToolbox.framework */,
+				C5254B2818E4257500E1DF59 /* AudioUnit.framework */,
+				C5254B2918E4257500E1DF59 /* CoreAudio.framework */,
 				C5254AEE18E424E100E1DF59 /* Foundation.framework */,
 				C5254AF018E424E100E1DF59 /* CoreGraphics.framework */,
 				C5254AF218E424E100E1DF59 /* UIKit.framework */,
 				C5254B0D18E424E100E1DF59 /* XCTest.framework */,
+				ADA985888EC1405E04CFF9F8 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,6 +143,7 @@
 		C5254AF418E424E100E1DF59 /* MIDI */ = {
 			isa = PBXGroup;
 			children = (
+				C5254B3318E5911B00E1DF59 /* 1.mid */,
 				C5254AFD18E424E100E1DF59 /* AppDelegate.h */,
 				C5254AFE18E424E100E1DF59 /* AppDelegate.m */,
 				C5254B0018E424E100E1DF59 /* Main.storyboard */,
@@ -119,6 +151,12 @@
 				C5254B0418E424E100E1DF59 /* ViewController.m */,
 				C5254B0618E424E100E1DF59 /* Images.xcassets */,
 				C5254AF518E424E100E1DF59 /* Supporting Files */,
+				ADA980C59A688EEB0DED3B36 /* ChannelSetting.m */,
+				ADA989FE7FE1F08BE5708324 /* ChannelSetting.h */,
+				ADA982786AB93473391F1CA9 /* MIDIParser.m */,
+				ADA980B3FFB1736D33C839B5 /* MIDIParser.h */,
+				ADA9819B6EE53ECC47563C14 /* TrackSetting.m */,
+				ADA980E629E6EDD7589962DF /* TrackSetting.h */,
 			);
 			path = MIDI;
 			sourceTree = "<group>";
@@ -200,7 +238,7 @@
 				ORGANIZATIONNAME = "Oleg Langer";
 				TargetAttributes = {
 					C5254B0B18E424E100E1DF59 = {
-						TestTargetID = C5254AEA18E424E100E1DF59;
+						TestTargetID = C5254AEA18E424E100E1DF59 /* MIDI */;
 					};
 				};
 			};
@@ -229,8 +267,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5254B0718E424E100E1DF59 /* Images.xcassets in Resources */,
+				C5254B2E18E42B4F00E1DF59 /* Vibraphone.aupreset in Resources */,
+				C5254B3418E5911B00E1DF59 /* 1.mid in Resources */,
 				C5254AF918E424E100E1DF59 /* InfoPlist.strings in Resources */,
 				C5254B0218E424E100E1DF59 /* Main.storyboard in Resources */,
+				ADA98DD16F6D8B112BFFA054 /* Trombone.aupreset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +293,9 @@
 				C5254B0518E424E100E1DF59 /* ViewController.m in Sources */,
 				C5254AFF18E424E100E1DF59 /* AppDelegate.m in Sources */,
 				C5254AFB18E424E100E1DF59 /* main.m in Sources */,
+				ADA98F201D05CB1C528D1C62 /* ChannelSetting.m in Sources */,
+				ADA9819D517591E3BBEFA605 /* MIDIParser.m in Sources */,
+				ADA98D463B67EF9DBA69FA00 /* TrackSetting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +500,7 @@
 				C5254B1F18E424E100E1DF59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5254B2018E424E100E1DF59 /* Build configuration list for PBXNativeTarget "MIDITests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +509,7 @@
 				C5254B2218E424E100E1DF59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
