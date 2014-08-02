@@ -24,8 +24,7 @@ static void CheckError(OSStatus error, const char *operation) {
     }
 }
 
-
-#define BANK_FILE_NAME @"filename"
+#define BANK_FILE_NAME @"GeneralUser"
 
 
 #import "ViewController.h"
