@@ -187,22 +187,48 @@ static void CheckError(OSStatus error, const char *operation) {
 }
 
 - (void)configureSequence {
-    MusicSequenceSetAUGraph(_sequence, _graph);
-
+    OSStatus result;
+    result = MusicSequenceSetAUGraph(_sequence, _graph);
+    CheckError(result, "Could not set AUGraphSequence");
+    
     UInt32 numberOfTracks = 0;
-    MusicSequenceGetTrackCount(_sequence, &numberOfTracks);
+    result = MusicSequenceGetTrackCount(_sequence, &numberOfTracks);
+    CheckError(result, "Could not get track count");
+    
     for (UInt32 i = 0; i < numberOfTracks; i ++) {
         MusicTrack track;
-        MusicSequenceGetIndTrack(_sequence, i, &track);
-        AUNode samplerNode;
+        result = MusicSequenceGetIndTrack(_sequence, i, &track);
+        CheckError(result, "Could not get track at index");
+        
+        // 64 bit fix
+        void *samplerValue;
         NSValue *value = _samplerNodes[i];
-        [value getValue:&samplerNode];
-        MusicTrackSetDestNode(track, samplerNode);
-
+        [value getValue:&samplerValue];
+        AUNode samplerNode = (AUNode)samplerValue;
+        
+        result = MusicTrackSetDestNode(track, samplerNode);
+        CheckError(result, "Could not set destination node");
+        
         MusicTimeStamp trackLen;
-        MusicTrackGetProperty(track, kSequenceTrackProperty_TrackLength, &trackLen, 0);
-        MusicTrackLoopInfo loopInfo = { 8, 0 };
-        MusicTrackSetProperty(track, kSequenceTrackProperty_LoopInfo, &loopInfo, sizeof(loopInfo));
+        result = MusicTrackGetProperty(track, kSequenceTrackProperty_TrackLength, &trackLen, 0);
+        CheckError(result, "Could not get length property at index");
+        
+        if ([self osVersionAllowsLooping]) {
+            MusicTrackLoopInfo loopInfo = { 8, 0 };
+            result = MusicTrackSetProperty(track, kSequenceTrackProperty_LoopInfo, &loopInfo, sizeof(loopInfo));
+        }
+        CheckError(result, "Could not set loop info property for track");
+    }
+}
+
+- (BOOL) osVersionAllowsLooping {
+    //    DON'T USE Looping in versions between 9.0 and 9.2 because there is a bug in iOS which leads to lock
+    NSOperatingSystemVersion version = [[NSProcessInfo processInfo] operatingSystemVersion];
+    if (version.majorVersion == 9 && version.minorVersion <=2) {
+        return NO;
+    }
+    else {
+        return YES;
     }
 }
 
